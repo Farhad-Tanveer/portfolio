@@ -22,7 +22,7 @@ const Home = () => {
           design and a drive to create seamless, interactive web experiences.
         </p>
         <div>
-          <button className=" btn btn-error text-white">
+          <button className=" btn btn-error normal-case text-white">
             View Work <HiArrowRight></HiArrowRight>{" "}
           </button>
         </div>
