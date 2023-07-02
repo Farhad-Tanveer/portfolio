@@ -6,7 +6,7 @@ import logo from "../../assets/logo/logo-transparent-png.png";
 
 const Navbar = () => {
   return (
-    <div className="navbar w-full h-[80px] flex justify-between items-center px-4 bg-base-100">
+    <div className="navbar fixed w-full h-[80px] flex justify-between items-center px-4 bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
