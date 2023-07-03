@@ -13,17 +13,17 @@ const Home = () => {
       <div className=" max-w-screen-2xl mx-auto px-8 lg:flex justify-center items-center h-full py-28">
         <div className="flex flex-col lg:w-1/2">
           <div className=" flex  items-center">
-            <h1 className="text-4xl sm:text-5xl font-poppins font-bold text-[#35404E]">
+            <h1 className="text-4xl sm:text-4xl font-mono font-bold text-[#35404E]">
               Mohammad Farhad Tanveer
             </h1>
             <div className=" w-20">
               <Lottie animationData={hi}></Lottie>
             </div>
           </div>
-          <h2 className="text-xl text-[#DC4970] font-poppins font-bold">
+          <h2 className="text-xl text-[#DC4970] font-mono font-bold">
             FrontEnd Developer
           </h2>
-          <p className="text-gray-500 py-4 max-w-[500px]">
+          <p className="text-gray-500 py-4 max-w-[500px] font-mono">
             I am a passionate junior front-end developer with a keen eye for
             design and a drive to create seamless, interactive web experiences.
           </p>
@@ -35,6 +35,7 @@ const Home = () => {
               </a>{" "}
               <FaRegPaperPlane />
             </button>
+
             <button className="btn btn-error normal-case text-white">
               My Works <HiArrowRight />
             </button>
