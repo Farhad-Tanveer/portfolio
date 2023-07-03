@@ -1,12 +1,14 @@
 import React from "react";
+import "./Navbar.css";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import logo from "../../assets/logo/logo-transparent-png.png";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   return (
-    <div className="navbar fixed w-full h-[80px] flex justify-between items-center px-4 bg-base-100">
+    <div className="navbar fixed z-10 w-full h-[80px] flex justify-between items-center px-4 bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -30,19 +32,39 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <a>Home</a>
+              <Link to="home" activeClass="active" smooth={true} duration={500}>
+                Home
+              </Link>
             </li>
             <li>
-              <a>About</a>
+              <Link
+                to="about"
+                activeClass="active"
+                smooth={true}
+                duration={500}
+              >
+                About
+              </Link>
             </li>
             <li>
-              <a>Skills</a>
+              <Link
+                to="skills"
+                activeClass="active"
+                smooth={true}
+                duration={500}
+              >
+                Skills
+              </Link>
             </li>
             <li>
-              <a>Work</a>
+              <Link to="works" smooth={true} duration={500}>
+                Works
+              </Link>
             </li>
             <li>
-              <a>Contact</a>
+              <Link to="contact" smooth={true} duration={500}>
+                Contact
+              </Link>
             </li>
           </ul>
         </div>
@@ -52,20 +74,30 @@ const Navbar = () => {
       </div>
       <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li>
-            <a>Home</a>
+          <li className=" font-serif text-lg">
+            <Link to="home" activeClass="active" smooth={true} duration={500}>
+              Home
+            </Link>
           </li>
-          <li>
-            <a>About</a>
+          <li className=" font-serif text-lg">
+            <Link to="about" activeClass="active" smooth={true} duration={500}>
+              About
+            </Link>
           </li>
-          <li>
-            <a>Skills</a>
+          <li className=" font-serif text-lg">
+            <Link to="skills" activeClass="active" smooth={true} duration={500}>
+              Skills
+            </Link>
           </li>
-          <li>
-            <a>Work</a>
+          <li className=" font-serif text-lg">
+            <Link to="works" smooth={true} duration={500}>
+              Works
+            </Link>
           </li>
-          <li>
-            <a>Contact</a>
+          <li className=" font-serif text-lg">
+            <Link to="contact" smooth={true} duration={500}>
+              Contact
+            </Link>
           </li>
         </ul>
       </div>
@@ -75,7 +107,7 @@ const Navbar = () => {
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600 rounded-tr-lg hover:rounded-md">
             <a
               className="flex justify-around items-center w-full text-gray-300"
-              href="/"
+              href="https://www.linkedin.com/in/farhad-tanveer/"
             >
               Linkedin <FaLinkedin size={30} />
             </a>
@@ -83,7 +115,7 @@ const Navbar = () => {
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333] hover:rounded-md">
             <a
               className="flex justify-around items-center w-full text-gray-300"
-              href="/"
+              href="https://github.com/Farhad-Tanveer"
             >
               Github <FaGithub size={30} />
             </a>
@@ -91,7 +123,7 @@ const Navbar = () => {
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0] hover:rounded-md">
             <a
               className="flex justify-around items-center w-full text-gray-300"
-              href="/"
+              href="https://mail.google.com/"
             >
               Email <HiOutlineMail size={30} />
             </a>
@@ -99,7 +131,7 @@ const Navbar = () => {
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69] rounded-br-lg hover:rounded-md">
             <a
               className="flex justify-around items-center w-full text-gray-300"
-              href="/"
+              href="https://drive.google.com/file/d/1I_-pPd7yeyAIup_0-PPHCjTSpNPMp02Q/view?usp=sharing"
             >
               Resume <BsFillPersonLinesFill size={30} />
             </a>
