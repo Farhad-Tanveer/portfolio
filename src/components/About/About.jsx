@@ -1,22 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Lottie from "lottie-react";
 import about from "./about.json";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const About = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
   return (
     <div
       name="about"
       className="w-full lg:h-screen bg-white text-[#35404E] font-poppins"
     >
-      <div className="max-w-screen-2xl mx-auto px-8 lg:flex justify-center items-center h-full py-20">
+      <div className="max-w-screen-xl mx-auto px-8 lg:flex justify-center items-center h-full py-20">
         <div className="grid lg:grid-cols-2 gap-20">
           <div className="flex justify-center items-center w-full">
             <div>
               <Lottie animationData={about}></Lottie>
             </div>
           </div>
-          <div className=" mt-20">
+          <div
+            className=" mt-20"
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-center"
+          >
             <p className="text-6xl font-mono font-bold text-[#35404E]">
               About Me
             </p>
@@ -75,18 +84,18 @@ const About = () => {
                 <div className="font-sans font-light">
                   <h2 className=" text-gray-500">
                     <span className=" text-gray-700 font-semibold">
-                      Complete Web Development Course
+                      Programming with JavaScript
                     </span>{" "}
-                    - Programming Hero
+                    - Coursera
                   </h2>
-                  <p className=" text-gray-500">Jan-2023 - Jun-2023</p>
+                  <p className=" text-gray-500">6 March 2023</p>
                 </div>
               </TabPanel>
               <TabPanel>
                 <div className=" font-sans font-light my-5">
                   <h2 className=" text-gray-500">
                     <span className=" text-gray-700 font-semibold">
-                      Msc In CSE
+                      Msc In Information Engineering and CS
                     </span>{" "}
                     - Hochschule Rhein Waal, Germany
                   </h2>

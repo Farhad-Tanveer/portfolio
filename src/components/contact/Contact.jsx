@@ -1,9 +1,16 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Lottie from "lottie-react";
 import email from "./email.json";
 import emailjs from "@emailjs/browser";
+import { FaHome, FaMobileAlt, FaRegEnvelope } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Contact = () => {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
+
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
@@ -25,9 +32,13 @@ const Contact = () => {
       );
   };
   return (
-    <div name="contact" className="w-full lg:h-screen bg-[#EBEFF3]">
-      <div className="max-w-screen-2xl mx-auto px-8 lg:flex justify-center items-center h-full py-28">
-        <div className="flex flex-col lg:w-1/2">
+    <div name="contact" className="w-full  bg-[#EBEFF3]">
+      <div className="max-w-screen-xl mx-auto px-8 lg:flex justify-center items-center h-full py-28">
+        <div
+          className="flex flex-col lg:w-1/2"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-center"
+        >
           <form
             ref={form}
             onSubmit={sendEmail}
@@ -73,7 +84,25 @@ const Contact = () => {
           <Lottie animationData={email}></Lottie>
         </div>
       </div>
-      <div></div>
+      <div className="max-w-screen-xl mx-auto pb-32">
+        <div className=" grid lg:grid-cols-3 gap-y-5">
+          <div className=" flex flex-col items-center gap-2">
+            <FaMobileAlt size={50} className=" text-red-500 mt-1"></FaMobileAlt>
+            <h1 className="text-red-600 font-bold font-serif">Call Us</h1>
+            <p>+491571058272</p>
+          </div>
+          <div className=" flex flex-col items-center gap-2">
+            <FaHome size={50} className=" text-red-500"></FaHome>
+            <h1 className="text-red-600 font-bold font-serif">Visit Office</h1>
+            <p>Duisburg, Germany</p>
+          </div>
+          <div className=" flex flex-col items-center gap-2">
+            <FaRegEnvelope size={50} className=" text-red-500"></FaRegEnvelope>
+            <h1 className="text-red-600 font-bold font-serif">Email Us</h1>
+            <p>farhadtanveer05@gmail.com</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

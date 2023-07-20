@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 // import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
@@ -7,10 +7,14 @@ import { FaGithub, FaLine, FaLink } from "react-icons/fa";
 import img1 from "../../assets/projects/chef-recipe-hunter.png";
 import img2 from "../../assets/projects/summer-camp.png";
 import img3 from "../../assets/projects/career-hub.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Works = () => {
   const [projects, setProjects] = useState([]);
-
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
   return (
     <div name="works" className=" w-full py-20  text-[#35404E]">
       <div className=" max-w-[1200px] mx-auto p-4">
@@ -21,7 +25,11 @@ const Works = () => {
         </div>
         <div>
           {/* first project */}
-          <div className="card lg:card-side bg-base-100 mt-20">
+          <div
+            className="card lg:card-side bg-base-100 mt-20"
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-center"
+          >
             <div className="relative max-w-full h-80 overflow-hidden rounded-lg">
               <div className="h-max w-full transition-transform duration-[5000ms] ease-linear transform translate-y-0 hover:-translate-y-[calc(100%-18rem)] rounded-lg">
                 <img
@@ -88,7 +96,11 @@ const Works = () => {
           </div>
 
           {/* second project */}
-          <div className="card lg:card-side bg-base-100 mt-20">
+          <div
+            className="card lg:card-side bg-base-100 mt-20"
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-center"
+          >
             <div className="card-body pl-0 lg:w-1/2">
               <h2 className="card-title">Sporty Summer</h2>
               <p>
@@ -152,7 +164,11 @@ const Works = () => {
           </div>
 
           {/* third project */}
-          <div className="card lg:card-side bg-base-100 mt-20">
+          <div
+            className="card lg:card-side bg-base-100 mt-20"
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-center"
+          >
             <div className="relative max-w-full h-80 overflow-hidden rounded-lg">
               <div className="h-max w-full transition-transform duration-[5000ms] ease-linear transform translate-y-0 hover:-translate-y-[calc(100%-18rem)] rounded-lg">
                 <img

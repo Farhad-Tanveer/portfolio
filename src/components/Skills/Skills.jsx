@@ -1,82 +1,230 @@
-import React from "react";
-
-import HTML from "../../assets/html.png";
-import CSS from "../../assets/css.png";
-import JavaScript from "../../assets/javascript.png";
-import ReactImg from "../../assets/react.png";
-import Node from "../../assets/node.png";
-import FireBase from "../../assets/firebase.png";
-import GitHub from "../../assets/github.png";
-import Tailwind from "../../assets/tailwind.png";
-import Mongo from "../../assets/mongo.png";
+import React, { useEffect } from "react";
+import { BiBadgeCheck } from "react-icons/Bi";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Skills = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
   return (
-    <div name="skills" className="w-full h-screen bg-[#EBEFF3] text-[#35404E]">
+    <div
+      name="skills"
+      className="w-full lg:h-screen bg-[#EBEFF3] text-[#35404E]"
+    >
+      <div className=" text-center pt-32 pb-20">
+        <p className="text-4xl font-mono font-bold inline ">Skills</p>
+      </div>
       {/* Container */}
-      <div className="max-w-[1200px] mx-auto p-4 flex flex-col justify-center w-full h-full">
-        <div>
-          <p className="text-4xl font-mono font-bold inline border-b-4 border-pink-600 ">
-            Skills
-          </p>
-        </div>
+      <div className="max-w-[1200px] mx-auto p-4 w-full h-full">
+        <div className=" grid lg:grid-cols-2 lg:gap-20">
+          <div className="card w-full bg-base-100 shadow-xl mb-5">
+            <div
+              className="card-body"
+              data-aos="fade-up"
+              data-aos-anchor-placement="top-center"
+            >
+              <h2 className=" card-title mb-5 text-lg justify-center  text-gray-700">
+                Frontend Development
+              </h2>
+              <div className=" grid grid-cols-2 gap-10">
+                <div className=" flex flex-col gap-5">
+                  <div className="flex  gap-2">
+                    <BiBadgeCheck
+                      color="black"
+                      size={20}
+                      className="mt-1 text-black"
+                    ></BiBadgeCheck>
+                    <div>
+                      <p className=" text-xl font-medium loading-5">React</p>
+                      <p className=" text-sm text-gray-500">Expertise</p>
+                    </div>
+                  </div>
 
-        <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8">
-          <div className=" bg-white flex justify-center items-center rounded-full shadow-md hover:shadow-lg transition duration-300">
-            <img
-              className="object-cover w-30 h-full p-10"
-              src={HTML}
-              alt="HTML icon"
-            />
+                  <div className="flex  gap-2">
+                    <BiBadgeCheck
+                      color="black"
+                      size={20}
+                      className="mt-1"
+                    ></BiBadgeCheck>
+                    <div>
+                      <p className=" text-xl font-medium loading-5">Tailwind</p>
+                      <p className=" text-sm text-gray-500">Expertise</p>
+                    </div>
+                  </div>
+                  <div className="flex  gap-2">
+                    <BiBadgeCheck
+                      color="black"
+                      size={20}
+                      className="mt-1"
+                    ></BiBadgeCheck>
+                    <div>
+                      <p className=" text-xl font-medium loading-5">HTML</p>
+                      <p className=" text-sm text-gray-500">Expertise</p>
+                    </div>
+                  </div>
+                  <div className="flex  gap-2">
+                    <BiBadgeCheck
+                      color="black"
+                      size={20}
+                      className="mt-1"
+                    ></BiBadgeCheck>
+                    <div>
+                      <p className=" text-xl font-medium loading-5">Git</p>
+                      <p className=" text-sm text-gray-500">Comfortable</p>
+                    </div>
+                  </div>
+                </div>
+                <div className=" flex flex-col gap-5">
+                  <div className="flex  gap-2">
+                    <BiBadgeCheck
+                      color="black"
+                      size={20}
+                      className="mt-1"
+                    ></BiBadgeCheck>
+                    <div>
+                      <p className=" text-xl font-medium loading-5">
+                        JavaScript
+                      </p>
+                      <p className=" text-sm text-gray-500">Expertise</p>
+                    </div>
+                  </div>
+                  <div className="flex  gap-2">
+                    <BiBadgeCheck
+                      color="black"
+                      size={20}
+                      className="mt-1"
+                    ></BiBadgeCheck>
+                    <div>
+                      <p className=" text-xl font-medium loading-5">
+                        Bootstrap
+                      </p>
+                      <p className=" text-sm text-gray-500">Expertise</p>
+                    </div>
+                  </div>
+                  <div className="flex  gap-2">
+                    <BiBadgeCheck
+                      color="black"
+                      size={20}
+                      className="mt-1"
+                    ></BiBadgeCheck>
+                    <div>
+                      <p className=" text-xl font-medium loading-5">CSS</p>
+                      <p className=" text-sm text-gray-500">Expertise</p>
+                    </div>
+                  </div>
+                  <div className="flex  gap-2">
+                    <BiBadgeCheck
+                      color="black"
+                      size={20}
+                      className="mt-1"
+                    ></BiBadgeCheck>
+                    <div>
+                      <p className=" text-xl font-medium loading-5">
+                        TypeScript
+                      </p>
+                      <p className=" text-sm text-gray-500">Basic</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="bg-white flex justify-center items-center rounded-full shadow-md hover:shadow-lg transition duration-300">
-            <img
-              className="object-cover w-30 h-full p-10"
-              src={CSS}
-              alt="CSS icon"
-            />
-          </div>
-          <div className="bg-white flex justify-center items-center rounded-full shadow-md hover:shadow-lg transition duration-300">
-            <img
-              className="object-cover w-30 h-full p-10"
-              src={JavaScript}
-              alt="JavaScript icon"
-            />
-          </div>
-          <div className="bg-white flex justify-center items-center rounded-full shadow-md hover:shadow-lg transition duration-300">
-            <img
-              className="object-cover w-30 h-full p-10"
-              src={ReactImg}
-              alt="React icon"
-            />
-          </div>
-          <div className="bg-white flex justify-center items-center rounded-full shadow-md hover:shadow-lg transition duration-300">
-            <img
-              className="object-cover w-30 h-full p-10"
-              src={Tailwind}
-              alt="Tailwind icon"
-            />
-          </div>
-          <div className="bg-white flex justify-center items-center rounded-full shadow-md hover:shadow-lg transition duration-300">
-            <img
-              className="object-cover w-30 h-full p-10"
-              src={Mongo}
-              alt="Mongodb icon"
-            />
-          </div>
-          <div className="bg-white flex justify-center items-center rounded-full shadow-md hover:shadow-lg transition duration-300">
-            <img
-              className="object-cover w-30 h-full p-10"
-              src={Node}
-              alt="node.js icon"
-            />
-          </div>
-          <div className="bg-white flex justify-center items-center rounded-full shadow-md hover:shadow-lg transition duration-300">
-            <img
-              className="object-cover w-30 h-full p-10"
-              src={FireBase}
-              alt="Firebase icon"
-            />
+          <div className="card w-full bg-base-100 shadow-xl mb-5">
+            <div
+              className="card-body"
+              data-aos="fade-up"
+              data-aos-anchor-placement="top-center"
+            >
+              <h2 className=" card-title mb-5 text-lg justify-center  text-gray-700">
+                Backend Development
+              </h2>
+              <div className=" grid grid-cols-2 gap-10">
+                <div className=" flex flex-col gap-5">
+                  <div className="flex  gap-2">
+                    <BiBadgeCheck
+                      color="black"
+                      size={20}
+                      className="mt-1"
+                    ></BiBadgeCheck>
+                    <div>
+                      <p className=" text-xl font-medium loading-5">Node JS</p>
+                      <p className=" text-sm text-gray-500">Familiar</p>
+                    </div>
+                  </div>
+                  <div className="flex  gap-2">
+                    <BiBadgeCheck
+                      color="black"
+                      size={20}
+                      className="mt-1"
+                    ></BiBadgeCheck>
+                    <div>
+                      <p className=" text-xl font-medium loading-5">
+                        Express JS
+                      </p>
+                      <p className=" text-sm text-gray-500">Comfortable</p>
+                    </div>
+                  </div>
+                  <div className="flex  gap-2">
+                    <BiBadgeCheck
+                      color="black"
+                      size={20}
+                      className="mt-1"
+                    ></BiBadgeCheck>
+                    <div>
+                      <p className=" text-xl font-medium loading-5">Stripe</p>
+                      <p className=" text-sm text-gray-500">Comfortable</p>
+                    </div>
+                  </div>
+                  <div className="flex  gap-2">
+                    <BiBadgeCheck
+                      color="black"
+                      size={20}
+                      className="mt-1"
+                    ></BiBadgeCheck>
+                    <div>
+                      <p className=" text-xl font-medium loading-5">Python</p>
+                      <p className=" text-sm text-gray-500">Basic</p>
+                    </div>
+                  </div>
+                </div>
+                <div className=" flex flex-col gap-5">
+                  <div className="flex  gap-2">
+                    <BiBadgeCheck
+                      color="black"
+                      size={20}
+                      className="mt-1"
+                    ></BiBadgeCheck>
+                    <div>
+                      <p className=" text-xl font-medium loading-5">Mongo DB</p>
+                      <p className=" text-sm text-gray-500">Comfortable</p>
+                    </div>
+                  </div>
+                  <div className="flex  gap-2">
+                    <BiBadgeCheck
+                      color="black"
+                      size={20}
+                      className="mt-1"
+                    ></BiBadgeCheck>
+                    <div>
+                      <p className=" text-xl font-medium loading-5">Firebase</p>
+                      <p className=" text-sm text-gray-500">Comfortable</p>
+                    </div>
+                  </div>
+                  {/* <div className="flex  gap-2">
+                    <BiBadgeCheck
+                      color="black"
+                      size={20}
+                      className="mt-1"
+                    ></BiBadgeCheck>
+                    <div>
+                      <p className=" text-xl font-medium loading-5">Stripe</p>
+                      <p className=" text-sm text-gray-500">Comfortable</p>
+                    </div>
+                  </div> */}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

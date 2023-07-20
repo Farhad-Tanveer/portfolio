@@ -1,8 +1,8 @@
 import React from "react";
 import "./Navbar.css";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaRegPaperPlane } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
-import { BsFillPersonLinesFill } from "react-icons/bs";
+import { BsFillMoonStarsFill, BsFillPersonLinesFill } from "react-icons/bs";
 import logo from "../../assets/logo/logo-transparent-png.png";
 import { Link } from "react-scroll";
 
@@ -68,11 +68,11 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">
+        <a className="">
           <img style={{ width: "150px" }} src={logo} alt="" />
         </a>
       </div>
-      <div className="navbar-end hidden lg:flex">
+      <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li className=" font-serif text-lg">
             <Link to="home" activeClass="active" smooth={true} duration={500}>
