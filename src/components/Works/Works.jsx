@@ -13,7 +13,7 @@ import "aos/dist/aos.css";
 const Works = () => {
   const [projects, setProjects] = useState([]);
   useEffect(() => {
-    AOS.init({ duration: 2000 });
+    AOS.init({ duration: 1000 });
   }, []);
   return (
     <div name="works" className=" w-full py-20  text-[#35404E]">
