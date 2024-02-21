@@ -1,8 +1,8 @@
 import React from "react";
 import "./Navbar.css";
-import { FaGithub, FaLinkedin, FaRegPaperPlane } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
-import { BsFillMoonStarsFill, BsFillPersonLinesFill } from "react-icons/bs";
+import { BsFillPersonLinesFill } from "react-icons/bs";
 import logo from "../../assets/logo/logo-transparent-png.png";
 import { Link } from "react-scroll";
 
